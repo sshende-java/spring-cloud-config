@@ -13,3 +13,12 @@ build:
   version: ${FROM_ENV}
   name: ${FROM_ENV}
 
+#Actuator   (to use refresh scope)
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
+
+#encrypt:
+#  key: myEncryptionKey123    #to encrypt and decrypt configuration values
