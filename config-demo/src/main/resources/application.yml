@@ -18,8 +18,10 @@ management:
   endpoints:
     web:
       exposure:
-        include: refresh
-#manually need to make POST call to get dynamic config - http://localhost:8080/actuator/refresh
+        include: busrefresh  #to make use of spring-cloud-starter-bus-amqp (Refreshes all instances (broadcast over the bus) we need to hit POST on atleast one microservice not all)
+        #http://localhost:8080/actuator/busrefresh
+
+#manually need to make POST call to get dynamic config - http://localhost:8080/actuator/refresh - (Only refreshes the instance you call it on)
 
 #encrypt:
 #  key: myEncryptionKey123    #to encrypt and decrypt configuration values
