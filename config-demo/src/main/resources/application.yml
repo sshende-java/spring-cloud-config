@@ -19,6 +19,7 @@ management:
     web:
       exposure:
         include: refresh
+#manually need to make POST call to get dynamic config - http://localhost:8080/actuator/refresh
 
 #encrypt:
 #  key: myEncryptionKey123    #to encrypt and decrypt configuration values
