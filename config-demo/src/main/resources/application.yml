@@ -2,7 +2,8 @@ spring:
   application:
     name: configdemo
 
-
+  config:   #import configuration from config server
+    import: configserver:http://localhost:8888
 
   profiles:
     active: prod
