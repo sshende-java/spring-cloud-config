@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: configserver
+#---------------------------------------------------This is to access config file from git
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/sshende-java/app-configuration.git
+          username: ${GIT_USER}   #this value coming from run config environment variables
+          password: ${GIT_TOKEN}  #this value coming from run config environment variables
+          default-label: master  # <-- by default spring cloud takes main branch, better mention 'master' here itself
+#---------------------------------------------------
+
+server:
+  port: 8888

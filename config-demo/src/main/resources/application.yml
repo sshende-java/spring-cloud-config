@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: configdemo
+
+
+
+  profiles:
+    active: prod
+
+build:
+  id: ${FROM_ENV}
+  version: ${FROM_ENV}
+  name: ${FROM_ENV}
+
